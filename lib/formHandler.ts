@@ -2,7 +2,7 @@
 // Replace FORMSPREE_ENDPOINT with your actual Formspree endpoint
 // Get it from https://formspree.io/ after signing up (free)
 
-export const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || 'YOUR_FORMSPREE_ENDPOINT_HERE'
+export const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || 'https://formspree.io/f/xyzvzaoq'
 
 export interface FormSubmissionResult {
   success: boolean
@@ -24,6 +24,8 @@ export async function submitContactForm(data: {
       body: JSON.stringify({
         ...data,
         _subject: `Contact Form: ${data.subject}`,
+        _to: 'Sales@mummymusthave.com',
+        _replyto: data.email,
       }),
     })
 
@@ -59,7 +61,9 @@ export async function submitNewsletter(email: string): Promise<FormSubmissionRes
       },
       body: JSON.stringify({
         email,
-        _subject: 'Newsletter Signup',
+        _subject: 'Newsletter Signup - MummyMustHave',
+        _to: 'Sales@mummymusthave.com',
+        _replyto: email,
         type: 'newsletter',
       }),
     })
@@ -95,23 +99,29 @@ export async function submitWaitlist(data: {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Accept': 'application/json',
       },
       body: JSON.stringify({
-        ...data,
-        _subject: 'ParentPal Waitlist Signup',
+        name: data.name,
+        email: data.email,
+        _subject: 'ParentPal Waitlist Signup - MummyMustHave',
+        _replyto: data.email,
         type: 'waitlist',
       }),
     })
 
+    const responseData = await response.json().catch(() => ({}))
+    
     if (response.ok) {
       return {
         success: true,
         message: 'You\'re on the list! We\'ll notify you when ParentPal launches.',
       }
     } else {
+      console.error('Waitlist submission failed:', response.status, responseData)
       return {
         success: false,
-        message: 'Something went wrong. Please try again.',
+        message: responseData.error || 'Something went wrong. Please try again.',
       }
     }
   } catch (error) {

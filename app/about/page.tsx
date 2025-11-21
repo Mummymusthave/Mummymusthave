@@ -1,3 +1,10 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About Us - MummyMustHave',
+  description: 'Learn about our story - two parents who struggled at first and wanted to help other parents struggle less.',
+}
+
 export default function About() {
   return (
     <div className="min-h-screen bg-gray-50">

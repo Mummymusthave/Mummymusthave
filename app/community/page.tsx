@@ -1,3 +1,10 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Community - MummyMustHave',
+  description: 'Join our parent community on Discord or Facebook. Connect with other parents, share experiences, and get support.',
+}
+
 const discordLink = process.env.NEXT_PUBLIC_DISCORD_URL || '#'
 const facebookLink = process.env.NEXT_PUBLIC_FACEBOOK_GROUP_URL || '#'
 

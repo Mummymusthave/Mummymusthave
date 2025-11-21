@@ -1,5 +1,11 @@
 import Link from 'next/link'
 import NewsletterSignup from '@/components/NewsletterSignup'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Home - MummyMustHave',
+  description: 'Supporting parents every step of the way with products, resources, and community support.',
+}
 
 export default function Home() {
   return (

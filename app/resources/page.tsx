@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import NewsletterSignup from '@/components/NewsletterSignup'
 import { guides, getGuidesByCategory } from '@/lib/guides'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Resources - MummyMustHave',
+  description: 'Helpful guides and resources for parents covering everything from new parent tips to single parent support.',
+}
 
 export default function Resources() {
   const resourceCategories = [

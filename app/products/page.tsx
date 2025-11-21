@@ -5,28 +5,30 @@ import { useState, useMemo } from 'react'
 import ProductModal from '@/components/ProductModal'
 
 export default function Products() {
-  // Placeholder product data - replace with real data later
   const allProducts = [
     {
       id: 1,
-      name: 'Product Name 1',
-      description: 'Product description will go here. This is a placeholder for your actual product information.',
-      category: 'Category 1',
+      name: 'Kids Book 1',
+      description: 'A wonderful children\'s book created with love. Perfect for bedtime stories and early learning.',
+      category: 'Books',
       comingSoon: false,
+      link: '#', // Add your book purchase link here
     },
     {
       id: 2,
-      name: 'Product Name 2',
-      description: 'Product description will go here. This is a placeholder for your actual product information.',
-      category: 'Category 2',
+      name: 'Kids Book 2',
+      description: 'Another delightful story for little ones. Engaging illustrations and heartwarming tales.',
+      category: 'Books',
       comingSoon: false,
+      link: '#', // Add your book purchase link here
     },
     {
       id: 3,
-      name: 'Upcoming Product',
-      description: 'This product is coming soon! Stay tuned for updates.',
-      category: 'Category 1',
-      comingSoon: true,
+      name: 'MummyMustHave Clothing',
+      description: 'Comfortable, stylish clothing for parents and kids. Shop our collection on TeeSpring.',
+      category: 'Clothing',
+      comingSoon: false,
+      link: '#', // Add your TeeSpring store link here
     },
   ]
 

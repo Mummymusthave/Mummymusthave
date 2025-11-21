@@ -9,6 +9,7 @@ interface Product {
   description: string
   category: string
   comingSoon: boolean
+  link?: string
 }
 
 interface ProductModalProps {
@@ -80,6 +81,23 @@ export default function ProductModal({ product, isOpen, onClose }: ProductModalP
                 >
                   Notify Me When Available
                 </Link>
+              ) : product.link && product.link !== '#' ? (
+                <>
+                  <a
+                    href={product.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 transition text-center"
+                  >
+                    Shop Now
+                  </a>
+                  <button
+                    onClick={onClose}
+                    className="flex-1 bg-gray-200 text-gray-700 px-6 py-3 rounded-xl font-semibold hover:bg-gray-300 transition"
+                  >
+                    Close
+                  </button>
+                </>
               ) : (
                 <>
                   <Link

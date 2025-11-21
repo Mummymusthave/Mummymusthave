@@ -66,7 +66,7 @@ export default function FAQ() {
     {
       category: 'general',
       question: 'How can I contact customer support?',
-      answer: 'You can reach our customer support team through the Contact page on our website. We typically respond within 24-48 hours. For urgent matters, please email support@mummymusthave.com.',
+      answer: 'You can reach our customer support team through the Contact page on our website. We typically respond within 24-48 hours. For urgent matters, please email Sales@mummymusthave.com.',
     },
   ]
 

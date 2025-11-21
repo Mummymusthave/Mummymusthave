@@ -1,5 +1,11 @@
 import Link from 'next/link'
 import WaitlistForm from '@/components/WaitlistForm'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'ParentPal - MummyMustHave',
+  description: 'ParentPal - Coming soon! The all-in-one app for parents to track milestones, get tips, and connect with community.',
+}
 
 export default function ParentPal() {
   const features = [
