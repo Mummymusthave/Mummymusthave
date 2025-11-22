@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import NewsletterSignup from '@/components/NewsletterSignup'
 import type { Metadata } from 'next'
 
@@ -130,31 +131,41 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Placeholder product cards */}
+            {/* My Activity Book */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border-2 border-gray-100 group">
-              <div className="h-48 bg-gradient-to-br from-blue-400 to-cyan-500 relative overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-blue-400 to-cyan-500 relative overflow-hidden flex items-center justify-center">
+                <Image 
+                  src="/products/book2.png" 
+                  alt="My Activity Book"
+                  fill
+                  className="object-contain p-4"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-white/20 rounded-full"></div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-display font-bold mb-2 text-gray-900">Product Name</h3>
-                <p className="text-gray-600 mb-4">Product description will go here...</p>
+                <h3 className="text-xl font-display font-bold mb-2 text-gray-900">My Activity Book</h3>
+                <p className="text-gray-600 mb-4">An engaging activity book featuring colouring pages, dot-to-dot puzzles, and mazes. Perfect for keeping kids entertained while developing problem-solving skills and creativity.</p>
                 <Link href="/products" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 group-hover:gap-2 gap-1 transition-all">
                   Learn More <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </Link>
               </div>
             </div>
 
+            {/* Resources */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 border-2 border-gray-100 group">
               <div className="h-48 bg-gradient-to-br from-violet-400 to-purple-500 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-white/20 rounded-full"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-white text-6xl">📚</div>
+                </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-display font-bold mb-2 text-gray-900">Product Name</h3>
-                <p className="text-gray-600 mb-4">Product description will go here...</p>
-                <Link href="/products" className="inline-flex items-center text-violet-600 font-semibold hover:text-violet-700 group-hover:gap-2 gap-1 transition-all">
-                  Learn More <span className="group-hover:translate-x-1 transition-transform">→</span>
+                <h3 className="text-xl font-display font-bold mb-2 text-gray-900">Parenting Resources</h3>
+                <p className="text-gray-600 mb-4">Practical guides and tips from real parents. From preparing for your newborn to supporting your child's development, find the help you need.</p>
+                <Link href="/resources" className="inline-flex items-center text-violet-600 font-semibold hover:text-violet-700 group-hover:gap-2 gap-1 transition-all">
+                  Explore Resources <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </Link>
               </div>
             </div>

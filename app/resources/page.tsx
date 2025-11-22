@@ -131,9 +131,9 @@ export default function Resources() {
               <p className="text-gray-700 mb-4 relative z-10">
                 Step-by-step video tutorials on common parenting tasks and challenges.
               </p>
-              <Link href="/contact" className="inline-flex items-center text-cyan-600 font-semibold hover:text-cyan-700 group-hover:gap-2 gap-1 transition-all relative z-10">
-                Contact Us <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </Link>
+              <span className="inline-flex items-center text-cyan-600 font-semibold relative z-10">
+                Coming Soon
+              </span>
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
 
