@@ -74,6 +74,12 @@ export const guides: Guide[] = [
     slug: 'social-and-emotional-development',
     excerpt: 'Helping your child develop healthy relationships...',
   },
+  {
+    title: 'Encouraging Independence and Self-Help Skills',
+    category: 'Child Development',
+    slug: 'encouraging-independence-and-self-help-skills',
+    excerpt: 'Teaching your child to do things for themselves builds confidence and life skills...',
+  },
   // Parenting Tips
   {
     title: 'Effective Communication with Kids',
@@ -92,6 +98,18 @@ export const guides: Guide[] = [
     category: 'Parenting Tips',
     slug: 'self-care-for-parents',
     excerpt: 'Why taking care of yourself matters for your family...',
+  },
+  {
+    title: 'Dealing with Picky Eaters',
+    category: 'Parenting Tips',
+    slug: 'dealing-with-picky-eaters',
+    excerpt: 'Practical strategies for encouraging healthy eating habits...',
+  },
+  {
+    title: 'Handling Tantrums and Meltdowns',
+    category: 'Parenting Tips',
+    slug: 'handling-tantrums-and-meltdowns',
+    excerpt: 'Understanding and managing challenging behaviors with empathy...',
   },
 ]
 

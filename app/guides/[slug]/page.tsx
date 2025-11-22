@@ -214,6 +214,42 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
         },
       ],
     },
+    'encouraging-independence-and-self-help-skills': {
+      sections: [
+        {
+          heading: 'Why Independence Matters',
+          content: 'Teaching children to do things for themselves builds confidence, self-esteem, and important life skills. It also helps them feel capable and reduces their dependence on you over time. Independence is a gift that serves them throughout life.',
+        },
+        {
+          heading: 'Start Small and Age-Appropriate',
+          content: 'Begin with simple tasks that match your child\'s abilities. A toddler can put toys in a basket. A preschooler can dress themselves (with help). An older child can make their bed or pack their lunch. Start where they are, not where you wish they were.',
+        },
+        {
+          heading: 'Let Them Try (Even When It\'s Messy)',
+          content: 'It\'s often faster and easier to do things yourself, but resist the urge. Let them try, even if it takes longer or isn\'t perfect. Spilled milk can be cleaned up, but the confidence they gain from trying is invaluable.',
+        },
+        {
+          heading: 'Break Tasks Into Steps',
+          content: 'Complex tasks can feel overwhelming. Break them down into smaller, manageable steps. "First put on your shirt, then your pants" is easier than "get dressed." Celebrate each step they complete.',
+        },
+        {
+          heading: 'Offer Choices',
+          content: 'Giving children choices within limits helps them feel in control and builds decision-making skills. "Do you want to wear the red shirt or blue shirt?" gives them autonomy while you maintain boundaries.',
+        },
+        {
+          heading: 'Be Patient and Encouraging',
+          content: 'Learning new skills takes time and practice. Be patient when they struggle, and celebrate their efforts, not just their successes. "You tried so hard!" means more than "Good job!" when they\'re learning.',
+        },
+        {
+          heading: 'Model and Teach',
+          content: 'Show them how to do things, then let them practice. You might do it together at first, then gradually step back. "Watch me first, then you try" is a powerful teaching approach.',
+        },
+        {
+          heading: 'Accept Imperfection',
+          content: 'Their version of "making the bed" might not look like yours, and that\'s okay. The goal is building skills and confidence, not perfection. You can always refine techniques later, but the willingness to try is what matters most.',
+        },
+      ],
+    },
     'effective-communication-with-kids': {
       sections: [
         {
@@ -271,6 +307,58 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
         {
           heading: 'Model Self-Care',
           content: 'When you practice self-care, you\'re modeling healthy behavior for your children. They learn that taking care of yourself is important. This is a valuable lesson that will serve them throughout life.',
+        },
+      ],
+    },
+    'dealing-with-picky-eaters': {
+      sections: [
+        {
+          heading: 'It\'s Normal',
+          content: 'Picky eating is incredibly common, especially in toddlers and young children. It\'s often a phase related to asserting independence or sensory sensitivities. Remember, you\'re not alone in this struggle.',
+        },
+        {
+          heading: 'Offer Variety Without Pressure',
+          content: 'Continue offering a variety of foods, but don\'t force or pressure your child to eat. The goal is to expose them to different foods over time. It can take 10-15 exposures before a child accepts a new food.',
+        },
+        {
+          heading: 'Make Meals Fun',
+          content: 'Get creative with presentation. Cut foods into fun shapes, arrange them in colorful patterns, or let kids help prepare meals. When children are involved in cooking, they\'re more likely to try new foods.',
+        },
+        {
+          heading: 'Set a Good Example',
+          content: 'Children learn by watching. When they see you enjoying a variety of healthy foods, they\'re more likely to try them too. Eat meals together as a family when possible.',
+        },
+        {
+          heading: 'Don\'t Give Up',
+          content: 'Keep offering rejected foods in different ways. A child who won\'t eat steamed broccoli might enjoy it roasted or in a soup. Be patient and persistent, but never turn mealtimes into a battle.',
+        },
+      ],
+    },
+    'handling-tantrums-and-meltdowns': {
+      sections: [
+        {
+          heading: 'Understand the Difference',
+          content: 'Tantrums are often about getting attention or something they want. Meltdowns are usually about being overwhelmed by emotions or sensory input. Understanding which you\'re dealing with helps you respond appropriately.',
+        },
+        {
+          heading: 'Stay Calm',
+          content: 'Your calm presence is crucial. Take deep breaths and remember that this is temporary. Children feed off your energy—if you stay calm, it helps them calm down faster.',
+        },
+        {
+          heading: 'Validate Their Feelings',
+          content: 'Acknowledge what they\'re feeling: "I can see you\'re really upset right now." This doesn\'t mean giving in to demands, but it shows you understand their emotions are real and valid.',
+        },
+        {
+          heading: 'Provide a Safe Space',
+          content: 'If possible, move to a quieter, less stimulating environment. Sometimes children need space to process their emotions. Stay nearby so they know you\'re there when they\'re ready.',
+        },
+        {
+          heading: 'Prevent When Possible',
+          content: 'Notice patterns. Are tantrums happening when they\'re hungry, tired, or overstimulated? Planning ahead—bringing snacks, ensuring rest, or avoiding overwhelming situations—can prevent many meltdowns.',
+        },
+        {
+          heading: 'After the Storm',
+          content: 'Once they\'ve calmed down, offer comfort and connection. Talk about what happened in simple terms. This is a learning opportunity, not a time for lectures or punishment.',
         },
       ],
     },

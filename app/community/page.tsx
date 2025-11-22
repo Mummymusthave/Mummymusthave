@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Join our parent community on Discord or Facebook. Connect with other parents, share experiences, and get support.',
 }
 
-const discordLink = process.env.NEXT_PUBLIC_DISCORD_URL || '#'
+const discordLink = process.env.NEXT_PUBLIC_DISCORD_URL || 'https://discord.gg/xYew6NFh'
 const facebookLink = process.env.NEXT_PUBLIC_FACEBOOK_GROUP_URL || '#'
 
 const joinOptions = [
@@ -50,8 +50,8 @@ export default function Community() {
             MummyMustHave Community
           </h1>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            A safe, judgment-free space where parents can swap stories, share what works, and remind each other we\'re not alone. 
-            We\'re not experts—just parents doing our best and helping others do the same.
+            A safe, judgment-free space where parents can swap stories, share what works, and remind each other we are not alone. 
+            We are not experts—just parents doing our best and helping others do the same.
           </p>
           <p className="text-sm text-gray-600 mt-4 max-w-2xl mx-auto">
             <strong>Disclaimer:</strong> Conversations in the community are peer-to-peer support. Always consult licensed professionals for medical, legal, or financial advice.

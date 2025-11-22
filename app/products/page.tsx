@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useMemo } from 'react'
 import ProductModal from '@/components/ProductModal'
 
@@ -8,19 +9,23 @@ export default function Products() {
   const allProducts = [
     {
       id: 1,
-      name: 'Kids Book 1',
-      description: 'A wonderful children\'s book created with love. Perfect for bedtime stories and early learning.',
+      name: 'Animals colouring book',
+      description: 'A delightful animal coloring book perfect for kids ages 1-12. Features adorable animals to color, encouraging creativity and fine motor skills development.',
       category: 'Books',
       comingSoon: false,
-      link: '#', // Add your book purchase link here
+      link: process.env.NEXT_PUBLIC_BOOK1_AMAZON_LINK || 'https://www.amazon.com/Animals-colouring-book-MummyMustHave-ltd/dp/B0D21Z83XF/ref=sr_1_5?dib=eyJ2IjoiMSJ9.wWc6jb-J2xHRPPUvfmo2TG_KZJwrQiweFNfiRQPc8O_GjHj071QN20LucGBJIEps.GCN-7tP0rKTk6_HDoJXMAb0cxL53IHzjGN5leU6IK4k&dib_tag=se&qid=1763763457&refinements=p_27%3AMummyMustHave+ltd&s=books&sr=1-5&text=MummyMustHave+ltd',
+      image: '/products/book1.png', // Add your book cover image to public/products/
+      externalLink: true, // Links to Amazon
     },
     {
       id: 2,
-      name: 'Kids Book 2',
-      description: 'Another delightful story for little ones. Engaging illustrations and heartwarming tales.',
+      name: 'My Activity Book',
+      description: 'An engaging activity book featuring colouring pages, dot-to-dot puzzles, and mazes. Perfect for keeping kids entertained while developing problem-solving skills and creativity.',
       category: 'Books',
       comingSoon: false,
-      link: '#', // Add your book purchase link here
+      link: process.env.NEXT_PUBLIC_BOOK2_AMAZON_LINK || 'https://www.amazon.com/My-Activity-Book-MummyMustHave-ltd/dp/B0D2LHG2GG/ref=sr_1_3?dib=eyJ2IjoiMSJ9.wWc6jb-J2xHRPPUvfmo2TG_KZJwrQiweFNfiRQPc8O_GjHj071QN20LucGBJIEps.GCN-7tP0rKTk6_HDoJXMAb0cxL53IHzjGN5leU6IK4k&dib_tag=se&qid=1763764477&refinements=p_27%3AMummyMustHave+ltd&s=books&sr=1-3&text=MummyMustHave+ltd',
+      image: '/products/book2.png', // Add your book cover image to public/products/
+      externalLink: true, // Links to Amazon
     },
     {
       id: 3,
@@ -28,7 +33,9 @@ export default function Products() {
       description: 'Comfortable, stylish clothing for parents and kids. Shop our collection on TeeSpring.',
       category: 'Clothing',
       comingSoon: false,
-      link: '#', // Add your TeeSpring store link here
+      link: process.env.NEXT_PUBLIC_TEESPRING_STORE_LINK || '#', // Add your TeeSpring store link in .env.local
+      image: '/products/clothing.jpg', // Add your clothing brand image to public/products/
+      externalLink: true, // Links to TeeSpring
     },
   ]
 
@@ -60,8 +67,7 @@ export default function Products() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">Our Products</h1>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl leading-relaxed">
-            Every product here has been tested by us or trusted parents in our community. 
-            No gimmicks—just things that actually work.
+            A selection of our products designed to support parents and children on their journey.
           </p>
         </div>
       </section>
@@ -125,9 +131,25 @@ export default function Products() {
                   key={product.id}
                   className={`bg-gradient-to-br ${gradient.card} rounded-2xl shadow-lg overflow-hidden border-2 ${gradient.border} hover:shadow-2xl transition-all transform hover:-translate-y-2 group relative`}
                 >
-                  <div className={`h-64 bg-gradient-to-br ${gradient.bg} relative overflow-hidden`}>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
-                    <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-white/20 rounded-full"></div>
+                  <div className={`h-80 bg-gradient-to-br ${gradient.bg} relative overflow-hidden flex items-center justify-center`}>
+                    {product.image ? (
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        className="object-contain p-4"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        onError={(e) => {
+                          // Fallback to gradient if image fails to load
+                          e.currentTarget.style.display = 'none'
+                        }}
+                      />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                        <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-white/20 rounded-full"></div>
+                      </>
+                    )}
                     {product.comingSoon && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-amber-500 text-gray-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg z-10">
                         Coming Soon

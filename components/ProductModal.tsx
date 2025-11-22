@@ -2,6 +2,7 @@
 
 import { Fragment } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface Product {
   id: number
@@ -10,6 +11,8 @@ interface Product {
   category: string
   comingSoon: boolean
   link?: string
+  image?: string
+  externalLink?: boolean
 }
 
 interface ProductModalProps {
@@ -52,6 +55,23 @@ export default function ProductModal({ product, isOpen, onClose }: ProductModalP
               </div>
             )}
             
+            {/* Product Image */}
+            {product.image && (
+              <div className="mb-6 relative w-full h-96 rounded-xl overflow-hidden bg-gray-50 flex items-center justify-center">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-contain p-4"
+                  sizes="(max-width: 768px) 100vw, 672px"
+                  onError={(e) => {
+                    // Hide image if it fails to load
+                    e.currentTarget.style.display = 'none'
+                  }}
+                />
+              </div>
+            )}
+            
             <span className="text-sm text-primary-600 font-semibold uppercase tracking-wide mb-2 block">
               {product.category}
             </span>
@@ -63,13 +83,6 @@ export default function ProductModal({ product, isOpen, onClose }: ProductModalP
             <div className="prose prose-lg max-w-none mb-6">
               <p className="text-gray-700 leading-relaxed">
                 {product.description}
-              </p>
-            </div>
-
-            <div className="bg-gray-50 border-l-4 border-primary-500 p-4 rounded mb-6">
-              <p className="text-sm text-gray-600">
-                <strong>Note:</strong> This product is shared based on our personal experience as parents. 
-                Individual results may vary. Always follow manufacturer instructions and consult professionals when needed.
               </p>
             </div>
 
@@ -89,7 +102,7 @@ export default function ProductModal({ product, isOpen, onClose }: ProductModalP
                     rel="noopener noreferrer"
                     className="flex-1 bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 transition text-center"
                   >
-                    Shop Now
+                    {product.externalLink ? (product.category === 'Books' ? 'Buy on Amazon' : 'Shop on TeeSpring') : 'Shop Now'}
                   </a>
                   <button
                     onClick={onClose}
