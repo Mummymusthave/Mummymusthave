@@ -102,13 +102,8 @@ export default function Community() {
                     }`}
                     aria-disabled={option.placeholder}
                   >
-                    {option.placeholder ? 'Link coming soon' : `Join ${option.title}`}
+                    {option.placeholder ? 'Coming Soon' : `Join ${option.title}`}
                   </a>
-                  {option.placeholder && (
-                    <p className="text-sm text-center text-gray-500 mt-3">
-                      Add your invite link in <code>.env.local</code> to activate this button.
-                    </p>
-                  )}
                 </div>
               </div>
             ))}
@@ -230,14 +225,9 @@ export default function Community() {
               className={`px-8 py-3 rounded-full font-semibold border-2 ${facebookLink === '#' ? 'border-white/40 text-white/70 cursor-not-allowed' : 'border-white text-white hover:bg-white hover:text-primary-600'}`}
               aria-disabled={facebookLink === '#'}
             >
-              {facebookLink === '#' ? 'Facebook link coming soon' : 'Join Facebook Group'}
+              {facebookLink === '#' ? 'Coming Soon' : 'Join Facebook Group'}
             </a>
           </div>
-          {(discordLink === '#' || facebookLink === '#') && (
-            <p className="text-sm text-white/70 mt-4">
-              Add your invite links via <code>NEXT_PUBLIC_DISCORD_URL</code> and <code>NEXT_PUBLIC_FACEBOOK_GROUP_URL</code>.
-            </p>
-          )}
         </div>
       </section>
     </div>

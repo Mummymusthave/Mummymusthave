@@ -30,12 +30,12 @@ export default function Products() {
     {
       id: 3,
       name: 'MummyMustHave Clothing',
-      description: 'Comfortable, stylish clothing for parents and kids. Shop our collection on TeeSpring.',
+      description: 'Comfortable, stylish clothing for parents and kids. Shop our collection on Creator Spring.',
       category: 'Clothing',
       comingSoon: false,
-      link: process.env.NEXT_PUBLIC_TEESPRING_STORE_LINK || '#', // Add your TeeSpring store link in .env.local
+      link: process.env.NEXT_PUBLIC_TEESPRING_STORE_LINK || 'https://mummymusthave.creator-spring.com',
       image: '/products/clothing.jpg', // Add your clothing brand image to public/products/
-      externalLink: true, // Links to TeeSpring
+      externalLink: true, // Links to Creator Spring
     },
   ]
 

@@ -183,11 +183,13 @@ export default function Contact() {
                 <h3 className="font-semibold text-gray-900 mb-2">Follow Us</h3>
                 <p className="text-gray-600 mb-4">Stay connected with us on social media</p>
                 <div className="flex space-x-4">
-                  {/* Social media links - add your actual links */}
-                  <a href="#" className="text-gray-600 hover:text-primary-600 transition">
-                    Facebook
-                  </a>
-                  <a href="#" className="text-gray-600 hover:text-primary-600 transition">
+                  <span className="text-gray-500">Facebook - Coming Soon</span>
+                  <a 
+                    href="https://www.instagram.com/mummymusthave/?hl=en" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-primary-600 transition"
+                  >
                     Instagram
                   </a>
                 </div>
