@@ -4,8 +4,14 @@ import { guides, getGuidesByCategory } from '@/lib/guides'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Resources - MummyMustHave',
-  description: 'Helpful guides and resources for parents covering everything from new parent tips to single parent support.',
+  title: 'Resources',
+  description: 'Free parenting guides and resources covering new parent tips, single parent support, child development, and practical parenting advice. Real advice from real parents.',
+  keywords: ['parenting guides', 'parenting tips', 'new parent guide', 'single parent support', 'child development', 'parenting advice', 'parenting resources'],
+  openGraph: {
+    title: 'Parenting Resources & Guides - MummyMustHave',
+    description: 'Free parenting guides and resources covering new parent tips, single parent support, and child development.',
+    type: 'website',
+  },
 }
 
 export default function Resources() {

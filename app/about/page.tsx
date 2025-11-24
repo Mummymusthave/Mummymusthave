@@ -1,8 +1,14 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Us - MummyMustHave',
-  description: 'Learn about our story - two parents who struggled at first and wanted to help other parents struggle less.',
+  title: 'About Us',
+  description: 'Learn about MummyMustHave - started by two parents who struggled at first and wanted to help other parents struggle less. Real support from real parents.',
+  keywords: ['about MummyMustHave', 'parenting support', 'parenting community', 'parenting mission'],
+  openGraph: {
+    title: 'About MummyMustHave - Our Story',
+    description: 'Learn about our story - two parents who struggled at first and wanted to help other parents struggle less.',
+    type: 'website',
+  },
 }
 
 export default function About() {

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useMemo } from 'react'
 import ProductModal from '@/components/ProductModal'
+import StructuredData from '@/components/StructuredData'
 
 export default function Products() {
   const allProducts = [
@@ -60,8 +61,32 @@ export default function Products() {
     })
   }, [searchQuery, selectedCategory])
 
+  // Structured data for products
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: allProducts.map((product, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Product',
+        name: product.name,
+        description: product.description,
+        category: product.category,
+        ...(product.link && product.link !== '#' && {
+          offers: {
+            '@type': 'Offer',
+            url: product.link,
+            availability: 'https://schema.org/InStock',
+          },
+        }),
+      },
+    })),
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <StructuredData data={productSchema} />
       {/* Header */}
       <section className="warm-gradient py-12 border-b-4 border-primary-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

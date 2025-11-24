@@ -3,8 +3,14 @@ import WaitlistForm from '@/components/WaitlistForm'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'ParentPal - MummyMustHave',
-  description: 'ParentPal - Coming soon! The all-in-one app for parents to track milestones, get tips, and connect with community.',
+  title: 'ParentPal App',
+  description: 'ParentPal - Coming soon! The all-in-one parenting app to track milestones, get tips, and connect with community. Join the waitlist to be notified when it launches.',
+  keywords: ['ParentPal app', 'parenting app', 'parenting tracker', 'milestone tracker', 'parenting tools'],
+  openGraph: {
+    title: 'ParentPal - Coming Soon Parenting App',
+    description: 'ParentPal - The all-in-one app for parents to track milestones, get tips, and connect with community.',
+    type: 'website',
+  },
 }
 
 export default function ParentPal() {

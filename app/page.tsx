@@ -1,16 +1,58 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import NewsletterSignup from '@/components/NewsletterSignup'
+import StructuredData from '@/components/StructuredData'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Home - MummyMustHave',
-  description: 'Supporting parents every step of the way with products, resources, and community support.',
+  title: 'Home',
+  description: 'MummyMustHave supports parents with real products, practical resources, and a supportive community. From new parents to single parents, find the help you need on your parenting journey.',
+  keywords: ['parenting support', 'new parents', 'single parents', 'parenting products', 'parenting resources', 'parenting community'],
+  openGraph: {
+    title: 'MummyMustHave - Supporting Parents Every Step of the Way',
+    description: 'MummyMustHave supports parents with real products, practical resources, and a supportive community.',
+    type: 'website',
+  },
 }
 
 export default function Home() {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'MummyMustHave',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://mummymusthave.com',
+    logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mummymusthave.com'}/logo.png`,
+    description: 'Supporting parents every step of the way with products, resources, and community support.',
+    sameAs: [
+      'https://www.instagram.com/mummymusthave/',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'Sales@mummymusthave.com',
+      contactType: 'Customer Service',
+    },
+  }
+
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'MummyMustHave',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://mummymusthave.com',
+    description: 'Supporting parents every step of the way with products, resources, and community support.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mummymusthave.com'}/products?search={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
   return (
     <div className="min-h-screen">
+      <StructuredData data={organizationSchema} />
+      <StructuredData data={websiteSchema} />
       {/* Hero Section */}
       <section className="warm-gradient relative overflow-hidden py-24 md:py-32">
         {/* Decorative elements */}

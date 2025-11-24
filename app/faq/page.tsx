@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import StructuredData from '@/components/StructuredData'
 
 interface FAQItem {
   question: string
@@ -75,8 +76,22 @@ export default function FAQ() {
     ? faqs 
     : faqs.filter(faq => faq.category === selectedCategory)
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <StructuredData data={faqSchema} />
       {/* Header */}
       <section className="bg-white py-12 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

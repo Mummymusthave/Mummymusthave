@@ -1,8 +1,14 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Community - MummyMustHave',
-  description: 'Join our parent community on Discord or Facebook. Connect with other parents, share experiences, and get support.',
+  title: 'Community',
+  description: 'Join our parent community on Discord. Connect with other parents, share experiences, and get support. A safe, judgment-free space for all parents.',
+  keywords: ['parenting community', 'parent support group', 'parenting Discord', 'parenting forum', 'single parent support', 'new parent community'],
+  openGraph: {
+    title: 'MummyMustHave Community - Join Our Parent Support Group',
+    description: 'Join our parent community on Discord. Connect with other parents, share experiences, and get support.',
+    type: 'website',
+  },
 }
 
 const discordLink = process.env.NEXT_PUBLIC_DISCORD_URL || 'https://discord.gg/xYew6NFh'
