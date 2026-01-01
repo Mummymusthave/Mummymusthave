@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: 'Your trusted partner for parenting products, resources, and support. Helping parents, new parents, and single parents navigate the journey of parenthood.',
     images: [
       {
-        url: '/logo.png',
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mummymusthave.com'}/logo.png`,
         width: 1200,
         height: 630,
         alt: 'MummyMustHave - Supporting Parents',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'MummyMustHave - Supporting Parents Every Step of the Way',
     description: 'Your trusted partner for parenting products, resources, and support.',
-    images: ['/logo.png'],
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL || 'https://mummymusthave.com'}/logo.png`],
     creator: '@mummymusthave',
   },
   robots: {
