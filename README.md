@@ -1,5 +1,7 @@
 # MummyMustHave Website
 
+<!-- Updated: Google Analytics configured -->
+
 A modern, family-friendly website for MummyMustHave - supporting parents every step of the way.
 
 ## 🚀 Getting Started
