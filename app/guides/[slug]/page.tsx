@@ -37,20 +37,36 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
     'preparing-for-your-newborn': {
       sections: [
         {
-          heading: 'Before Baby Arrives',
-          content: 'Preparing for a newborn can feel overwhelming, but breaking it down into manageable steps helps. Start by setting up the essentials: a safe sleeping space, feeding supplies, and basic baby care items. Remember, you don\'t need everything—just the basics to get started.',
+          heading: 'How to Prepare for a Newborn: A Guide for First-Time Parents',
+          content: 'If you\'re expecting your first baby, you\'re probably feeling a mix of excitement and nerves. That\'s completely normal. This guide is here to help you prepare practically and emotionally for your newborn, without the overwhelm. We\'ll cover the essentials you actually need, how to set up your space, and what to expect in those first days. Remember, every parent feels uncertain at first—you\'ve got this.',
         },
         {
-          heading: 'Essential Items Checklist',
-          content: 'Focus on the essentials: diapers, wipes, onesies, a safe place for baby to sleep, feeding supplies (whether breastfeeding or formula), and a car seat. Everything else can wait. We found that having too much stuff actually made things more stressful.',
+          heading: 'Before Baby Arrives: Start with the Basics',
+          content: 'Preparing for a newborn can feel overwhelming, but breaking it down into manageable steps helps. Start by setting up the essentials: a safe sleeping space, feeding supplies, and basic baby care items. Remember, you don\'t need everything—just the basics to get started. Focus on what you\'ll need in the first week, not the first year. You can always buy more as you go. Many parents find that having too much stuff actually makes things more stressful, not easier.',
         },
         {
-          heading: 'Preparing Your Home',
-          content: 'Create a safe, comfortable space for your baby. This doesn\'t mean a perfect nursery—a corner of your room works perfectly. Make sure you have easy access to diapers, wipes, and a place to change baby. Set up feeding stations where you\'ll be comfortable.',
+          heading: 'Newborn Essentials Checklist',
+          content: 'Here\'s a practical checklist of what you actually need before your baby arrives. Don\'t feel pressured to get everything at once—start with the must-haves and build from there.\n\n**Sleep Essentials**\n• Crib or bassinet (meets UK safety standards)\n• Firm, flat mattress that fits snugly\n• Fitted sheets (at least 2-3 for changes)\n• Swaddles or sleep sacks (2-3)\n• Room thermometer (ideal temperature: 16-20°C)\n\n**Feeding Essentials**\n• If breastfeeding: nursing bras, breast pads, nipple cream\n• If formula feeding: bottles (4-6), formula, bottle brush, steriliser\n• Burp cloths or muslins (6-8)\n• Comfortable feeding chair or spot with good back support\n\n**Nappy & Hygiene Essentials**\n• Newborn nappies (size 0-1, start with 1-2 packs)\n• Nappy wipes or cotton wool and water\n• Nappy cream (zinc-based barrier cream)\n• Baby bath or basin\n• Soft towels (2-3)\n• Gentle baby wash (fragrance-free)\n• Cotton wool balls\n• Umbilical cord care: keep area clean and dry, avoid covering with nappy\n\n**Health & Safety**\n• Digital thermometer (for room and baby)\n• Baby monitor (if baby will sleep in separate room)\n• Basic first aid kit (plasters, antiseptic)\n• Car seat (rear-facing, properly installed)\n• Baby nail clippers or soft file',
         },
         {
-          heading: 'Mental Preparation',
-          content: 'The most important preparation is mental. Know that it\'s okay to feel overwhelmed. It\'s okay to not know everything. Every parent learns as they go. Trust yourself, and remember that you\'re doing your best—and that\'s enough.',
+          heading: 'Preparing Your Home: Practical Setup Tips',
+          content: 'Create a safe, comfortable space for your baby. This doesn\'t mean a perfect nursery—a corner of your room works perfectly. Here\'s what to focus on:\n\n• Sleeping area: Set up the crib or bassinet in your room for the first 6 months (recommended for safe sleep). Make sure it\'s away from windows, radiators, and cords.\n• Changing station: Set up a dedicated spot with easy access to nappies, wipes, and cream. This could be a changing table, or just a mat on a dresser. Have everything within arm\'s reach.\n• Feeding stations: Create comfortable spots around your home for feeding. Have water, snacks, and entertainment (phone, book) nearby. You\'ll spend a lot of time here.\n• Storage: Organise baby clothes by size (newborn, 0-3 months). You don\'t need to wash everything in advance—just have a few outfits ready.\n• Safety check: Before baby arrives, do a quick safety check: secure furniture to walls, cover plug sockets, remove small objects from reach.',
+        },
+        {
+          heading: 'First Days at Home: What to Expect',
+          content: 'Those first few days at home can feel intense, but knowing what to expect helps. Here\'s what you might experience:\n\n**Emotionally**\nYou might feel overwhelmed, exhausted, and uncertain—this is completely normal. You might also feel incredible love and joy. Both are valid. It\'s okay to cry, to feel unsure, and to ask for help.\n\n**Feeding**\nNewborns typically feed every 2-3 hours, sometimes more frequently. This is normal and helps establish your milk supply if breastfeeding, or ensures baby gets enough nutrition. Feed on demand—baby will let you know when they\'re hungry.\n\n**Sleep**\nYour baby will sleep a lot (14-17 hours a day), but in short bursts. You\'ll be tired. Sleep when baby sleeps—housework can wait. Your rest is more important than a tidy house.\n\n**What baby needs**\nIn those first days, your baby really just needs feeding, changing, cuddles, and sleep. Everything else can wait. Trust your instincts, and remember: you\'re learning, and that\'s okay.',
+        },
+        {
+          heading: 'Mental Preparation: Building Confidence',
+          content: 'The most important preparation is mental. Know that it\'s okay to feel overwhelmed. It\'s okay to not know everything. Every parent learns as they go. Here\'s how to prepare mentally:\n\n• Accept uncertainty: You won\'t have all the answers, and that\'s fine. Parenting is learned through experience.\n• Trust yourself: You know your baby better than anyone. If something feels wrong, trust that feeling.\n• Build your support network: Line up people who can help—partner, family, friends. You don\'t have to do this alone.\n• Set realistic expectations: The first weeks are about survival, not perfection. Good enough is good enough.\n• Prepare for emotions: You might feel joy, fear, exhaustion, and love all at once. This is normal.\n\nRemember: you\'re doing your best, and that\'s enough. Every parent feels uncertain at first. You\'ve got this.',
+        },
+        {
+          heading: 'Frequently Asked Questions',
+          content: '**How much should I prepare before the baby arrives?**\n\nFocus on the essentials: safe sleep space, feeding supplies, nappies, and a few outfits. You don\'t need everything. Many items can wait until after baby arrives when you know what you actually need.\n\n**Do I need everything straight away?**\n\nNo. Start with the basics from the checklist above. You can buy more as you go. Many parents find they over-prepared and ended up with things they never used.\n\n**What are the most commonly forgotten items?**\n\nParents often forget: burp cloths (you need more than you think), comfortable feeding clothes, snacks for yourself, water bottle, and a good phone charger near your feeding spot.\n\n**How can I feel more confident as a new parent?**\n\nConfidence comes with time and experience. Start by trusting your instincts, asking for help when needed, and remembering that every parent learns as they go. You don\'t need to know everything—just what your baby needs right now.\n\n**Should I set up a full nursery before baby arrives?**\n\nNot necessary. A safe sleep space in your room is what matters most. You can decorate and organise the nursery later when you have more energy and know what works for you.\n\n**What if I don\'t feel ready?**\n\nThat\'s completely normal. No one feels fully ready, even experienced parents. Focus on the essentials, trust yourself, and know that you\'ll learn what you need as you go.',
+        },
+        {
+          heading: 'You\'re Ready',
+          content: 'You\'ve got the essentials, you\'ve prepared your space, and you\'ve done your best to get ready. That\'s enough. The rest you\'ll learn along the way. Remember: every parent feels uncertain at first, and every baby is different. Trust yourself, ask for help when you need it, and know that you\'re doing great.\n\nIf you\'re looking for more support, check out our guide on "First Week at Home" for what to expect in those early days, or explore our other resources for new parents. You\'ve got this.',
         },
       ],
     },
@@ -412,16 +428,109 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
             <div className="prose prose-lg max-w-none">
-              {content.sections.map((section, index) => (
-                <div key={index} className="mb-8 last:mb-0">
-                  <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">
-                    {section.heading}
-                  </h2>
-                  <p className="text-gray-700 leading-relaxed text-lg">
-                    {section.content}
-                  </p>
-                </div>
-              ))}
+              {content.sections.map((section, index) => {
+                // Simple content renderer that handles basic formatting
+                const renderContent = (text: string) => {
+                  if (!text) return null
+                  
+                  const parts = text.split(/\n\n/).filter(p => p.trim())
+                  const elements: React.ReactNode[] = []
+                  
+                  parts.forEach((part, partIndex) => {
+                    const trimmedPart = part.trim()
+                    if (!trimmedPart) return
+                    
+                    const lines = trimmedPart.split('\n').map(l => l.trim()).filter(l => l)
+                    
+                    // Check if it starts with a bold heading followed by a list
+                    if (lines.length > 1 && lines[0].startsWith('**') && lines[0].endsWith('**')) {
+                      const heading = lines[0].replace(/\*\*/g, '')
+                      const listLines = lines.slice(1).filter(l => l.startsWith('•'))
+                      
+                      if (listLines.length > 0) {
+                        const listItems = listLines.map(l => l.replace(/^•\s*/, '').trim()).filter(i => i)
+                        elements.push(
+                          <div key={partIndex} className="mb-6">
+                            <h3 className="text-xl font-display font-semibold text-gray-900 mt-4 mb-3">
+                              {heading}
+                            </h3>
+                            <ul className="list-disc list-inside space-y-2 text-gray-700 leading-relaxed text-lg ml-4">
+                              {listItems.map((item, itemIndex) => (
+                                <li key={itemIndex}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )
+                        return
+                      }
+                    }
+                    
+                    // Check if it's a pure list (all lines start with •)
+                    if (lines.length > 0 && lines.every(l => l.startsWith('•'))) {
+                      const listItems = lines.map(l => l.replace(/^•\s*/, '').trim()).filter(i => i)
+                      if (listItems.length > 0) {
+                        elements.push(
+                          <ul key={partIndex} className="list-disc list-inside space-y-2 mb-4 text-gray-700 leading-relaxed text-lg ml-4">
+                            {listItems.map((item, itemIndex) => (
+                              <li key={itemIndex}>{item}</li>
+                            ))}
+                          </ul>
+                        )
+                        return
+                      }
+                    }
+                    
+                    // Check if it's a bold heading (single line, starts and ends with **)
+                    if (lines.length === 1 && trimmedPart.startsWith('**') && trimmedPart.endsWith('**')) {
+                      const heading = trimmedPart.replace(/\*\*/g, '')
+                      elements.push(
+                        <h3 key={partIndex} className="text-xl font-display font-semibold text-gray-900 mt-6 mb-3">
+                          {heading}
+                        </h3>
+                      )
+                      return
+                    }
+                    
+                    // Check if it's a FAQ question (starts with **question** followed by answer)
+                    const questionMatch = trimmedPart.match(/^\*\*(.*?)\*\*\s*([\s\S]+)$/)
+                    if (questionMatch) {
+                      const question = questionMatch[1]
+                      const answer = questionMatch[2].trim()
+                      if (answer) {
+                        elements.push(
+                          <div key={partIndex} className="mb-6">
+                            <h3 className="text-xl font-display font-semibold text-gray-900 mb-2">
+                              {question}
+                            </h3>
+                            <p className="text-gray-700 leading-relaxed text-lg">
+                              {answer}
+                            </p>
+                          </div>
+                        )
+                        return
+                      }
+                    }
+                    
+                    // Regular paragraph
+                    elements.push(
+                      <p key={partIndex} className="text-gray-700 leading-relaxed text-lg mb-4">
+                        {trimmedPart}
+                      </p>
+                    )
+                  })
+                  
+                  return elements.length > 0 ? <>{elements}</> : null
+                }
+
+                return (
+                  <div key={index} className="mb-8 last:mb-0">
+                    <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">
+                      {section.heading}
+                    </h2>
+                    {renderContent(section.content)}
+                  </div>
+                )
+              })}
             </div>
           </div>
 

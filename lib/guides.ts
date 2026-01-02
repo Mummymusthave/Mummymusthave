@@ -22,7 +22,7 @@ export const guides: Guide[] = [
     title: 'Preparing for Your Newborn',
     category: 'New Parent Guide',
     slug: 'preparing-for-your-newborn',
-    excerpt: 'Everything you need to know before your baby arrives...',
+    excerpt: 'A practical guide to preparing for your newborn baby. Essential checklists, what to expect, and how to feel confident as a first-time parent.',
   },
   {
     title: 'First Week at Home',
